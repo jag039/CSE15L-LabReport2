@@ -21,7 +21,28 @@ The request results in concatenating a new line containing the string after = to
 ![Image](StringServer3.png)
 
 ## Part 2 - Bugs and Symptons, Debugging, and Testing
+Failure Inducing Input
+```
+  @Test
+  public void testReverseInPlaceArray() {
+    int[] input = { 1, 2, 3};
+    ArrayExamples.reverseInPlace(input);
+    assertArrayEquals(new int[] {3, 2, 1 }, input);
+  }
+```
 
+Non-Failure Inducing Input
+```
+  @Test
+  public void testReverseInPlace() {
+    int[] input1 = { 3 };
+    ArrayExamples.reverseInPlace(input1);
+    assertArrayEquals(new int[] { 3 }, input1);
+  }
+```
+
+The Sympton
+![Imgae](Bug1.png)
 
 
 
